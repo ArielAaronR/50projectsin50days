@@ -10,10 +10,26 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Form Input Wave</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div class="container">
+      <h1>Please Login</h1>
+      <form>
+        <div class="form-control">
+          <input type="text" required />
+          <label>Email</label>
+        </div>
+
+        <div class="form-control">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+
+        <button class="btn">Login</button>
+        <p class="text">Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
 
     <script src="script.js"></script>
   </body>
