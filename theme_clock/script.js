@@ -77,7 +77,7 @@ function setTime() {
 
   timeEl.innerHTML = `${hoursForClock}:${
     minutes < 10 ? '0' + minutes : minutes
-  }:${seconds} ${amppm}`;
+  }:${seconds < 10 ? '0' + seconds : seconds} ${amppm}`;
 
   dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle"> ${day}</span> `;
 }
