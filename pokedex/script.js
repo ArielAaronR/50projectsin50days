@@ -47,9 +47,10 @@ const createPokemonCard = (pokemon) => {
   const id = pokemon.id.toString().padStart(3, '0');
 
   const poke_types = pokemon.types.map((type) => type.type.name);
-  console.log(poke_types);
-  const type = main_types.filter((type) => poke_types.indexOf(type) > -1);
-  const multiType = type.join(' / ');
+
+  const type = main_types.find((type) => poke_types.indexOf(type) > -1);
+  const multiType = main_types.filter((type) => poke_types.indexOf(type) > -1);
+  const multiTypes = multiType.join(' / ');
   const color = colors[type];
 
   pokemonEl.style.backgroundColor = color;
@@ -64,7 +65,7 @@ const createPokemonCard = (pokemon) => {
         <div class="info">
             <span class="number">#${id}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Type: <span>${multiType}</span></small>
+            <small class="type">Type: <span>${multiTypes}</span></small>
         </div>
   `;
 
